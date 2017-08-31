@@ -1,6 +1,6 @@
 # Disambiguation of Neural Disambiguation of Causal Lexical Markers Based on Context
 
-Causation is part of the human mental model of reasoning, so it is crucial the understanding of causal relations in text in order to build the causal reasoning expressed by an human in a piece of text. This work is focused on the disambiguation of the causal meaning of lexical markers or discurse connectives. The disambiguation system is based on deep learning and the use of dense vector spaces to represent the meaning of the input utterances. The data used is the AltLex Corpus (Hidey and McKeown, 2016), and the results reached outperform the state-of-the-art on that corpus.
+Causation is part of the human mental model of reasoning, so it is crucial the understanding of causal relations in text in order to build the causal reasoning expressed by an human in a piece of text. This work is focused on the disambiguation of the causal meaning of lexical markers or discurse connectives. The disambiguation system is based on deep learning and the use of dense vector spaces to represent the meaning of the input utterances. The data used is the AltLex Corpus (Hidey and McKeown, 2016) ([https://github.com/chridey/altlex](repository "repository of AltLex corpus"), [https://www.aclweb.org/anthology/P/P16/P16-1135.pdf](paper "paper of AltLex corpus")), and the results reached outperform the state-of-the-art on that corpus.
 
 Please use the following citation:
 
@@ -33,13 +33,11 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 **(change this as needed!)**
 
 * `folder/src` -- The code of the experiments
-* `folder/src/semantic_relation_classification_console_app.py -- The main file of the application
+* `folder/src/semantic_relation_classification_console_app.py` -- The main file of the application
 * `folder/model` -- The files of the application
-* ...
 * `data/config` -- The configuration files
 
 ## Requirements
-**(change this as needed!)**
 
 * python 3.5.4
 * tensorflow 0.11.0rc2
@@ -53,7 +51,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 In order to run the code used for the experiments of the paper, you have to know the following:
 
-1.- You can evaluate the two nueral arquitectures of the paper:
+1.- You can evaluate the two neural arquitectures of the paper:
   * Stated_Pair_LSTM
   * Pair_LSTM
 2.- You can evaluate the three zero-padding strategies:
@@ -69,8 +67,8 @@ Configuration:
 
 To evaluate the different configurations of the network you have to use one of the files of the folder "config". Depending on the arquitecture you want to evaluate you have to use a different file:
 
-* For the arquitecture Steted_Pair_LSTM: Please use the configuration files: config_altlex_sentence_encoding_lstm_stated_
-* For the arquitecture Pair_LSTM: Please use the configuration files: config_altlex_sentence_encoding_lstm_
+* For the arquitecture `Stated_Pair_LSTM`: Please use the configuration files: config_altlex_sentence_encoding_lstm_stated_
+* For the arquitecture `Pair_LSTM`: Please use the configuration files: config_altlex_sentence_encoding_lstm_
 
 The name of the zero-padding strategy (max, mean, mode) and the optimizer (adadelta, adam) are in the name of the file. For instance, if you want to evaluate the arquitecture Pair_LSTM_Mean_Adam, you have to use the configuration file config_altlex_sentence_encoding_lstm_lexical_marker_in_second_argument_mean_adam.txt.
 
